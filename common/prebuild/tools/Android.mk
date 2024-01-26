@@ -86,44 +86,6 @@ include $(BUILD_PREBUILT)
 #######################
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := data_resume.sh
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-LOCAL_MODULE_CLASS := FAKE
-include $(BUILD_PREBUILT)
-
-#######################
-include $(CLEAR_VARS)
-LOCAL_MODULE := bootclone.sh
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-LOCAL_MODULE_CLASS := FAKE
-include $(BUILD_PREBUILT)
-
-#######################
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := precopy.sh
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-LOCAL_MODULE_CLASS := FAKE
-include $(BUILD_PREBUILT)
-
-#######################
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := preinstall.sh
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-LOCAL_MODULE_CLASS := FAKE
-include $(BUILD_PREBUILT)
-
-#######################
-include $(CLEAR_VARS)
 LOCAL_MODULE := log_service
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT)/bin

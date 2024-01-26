@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # preinstall apk
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     DragonFire \
     DragonPhone \
     DragonAging
@@ -53,11 +53,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SoundRecorder \
     LoggerService \
-    LogCopyService \
-    GooglePinyinIME
-
-PRODUCT_COPY_FILES += \
-    device/softwinner/common/config/config_mem.ini:root/config_mem.ini
+    LogCopyService
 
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*.so,device/softwinner/common/library-crack/lib32,system/lib)

@@ -11,10 +11,6 @@ on post-fs
     restorecon_recursive /logger
     mkdir /logger/lost+found 0770 root root
 
-on post-fs-data
-    start bootclone
-    start precopy
-
 on boot
     # last shutdown alarm will cause the suspend alarm invalid, so clean it
     write /sys/class/rtc/rtc0/wakealarm 0
@@ -33,27 +29,6 @@ on early-fs
     setrlimit 13 40 40
     start zygote
     start zygote_secondary
-
-on property:sys.bootstrap_service_started=1
-    start preinstall
-
-service bootclone /sbin/busybox sh /system/bin/bootclone.sh
-    user root
-    group root
-    oneshot
-    disabled
-
-service precopy /sbin/busybox sh /system/bin/precopy.sh
-    user root
-    group root
-    disabled
-    oneshot
-
-service preinstall /sbin/busybox sh /system/bin/preinstall.sh
-    user root
-    group root
-    disabled
-    oneshot
 
 on fs
 
