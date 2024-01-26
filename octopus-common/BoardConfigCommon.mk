@@ -29,7 +29,6 @@ BOARD_SEPOLICY_UNION := \
 	kernel.te \
 	mediaserver.te \
 	netd.te \
-	preinstall.te \
 	pvrsrvctl.te \
 	recovery.te \
         rild.te \

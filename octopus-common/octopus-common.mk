@@ -1,9 +1,6 @@
 # inherit common.mk
 $(call inherit-product, device/softwinner/common/common.mk)
 
-DEVICE_PACKAGE_OVERLAYS := \
-	device/softwinner/octopus-common/overlay \
-	$(DEVICE_PACKAGE_OVERLAYS)
 PRODUCT_PACKAGES += \
 	hwcomposer.octopus \
 	lights.octopus \
