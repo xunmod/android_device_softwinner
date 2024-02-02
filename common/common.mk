@@ -7,12 +7,12 @@ DEVICE_PACKAGE_OVERLAYS := \
 PRODUCT_COPY_FILES += \
     device/softwinner/common/init_parttion.sh:root/sbin/init_parttion.sh \
     device/softwinner/common/init.common.rc:root/init.common.rc \
-	device/softwinner/common/sensors.sh:system/bin/sensors.sh
+    device/softwinner/common/sensors.sh:system/bin/sensors.sh
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_PROPERTY_OVERRIDES += \
-       dalvik.vm.image-dex2oat-filter="" \
-       dalvik.vm.dex2oat-filter=""
+    dalvik.vm.image-dex2oat-filter="" \
+    dalvik.vm.dex2oat-filter=""
 endif
 
 # preinstall apk
@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     DragonFire \
     DragonPhone \
     DragonAging
-	
+    
 # usb
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -56,10 +56,13 @@ PRODUCT_PACKAGES += \
     LogCopyService
 
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*.so,device/softwinner/common/library-crack/lib32,system/lib)
+    device/softwinner/common/config/config_mem.ini:root/config_mem.ini
 
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*.so,device/softwinner/common/library-crack/lib64,system/lib64)
+    $(call find-copy-subdir-files,*.so,device/softwinner/common/library-crack/lib32,system/lib)
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.so,device/softwinner/common/library-crack/lib64,system/lib64)
 
 
 # add for start bg service at the same time
